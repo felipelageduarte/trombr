@@ -24,7 +24,7 @@ function resizeImg(){
 
 $(window).load(resizeImg);
 $(window).resize(resizeImg);
-*/
+
 
 $(document).ready(function(){
 	// Grab a select field
@@ -35,10 +35,10 @@ $(document).ready(function(){
 
 	// Initialize the selectmenu
 	el.selectmenu();
-	console.log("dentro");
 	// jQM refresh
 	el.selectmenu("refresh", true);
 });
+*/
 
 $(document).change(function(){
     var latitude = $("#LatitudeTextInput").val();
@@ -71,41 +71,46 @@ function submitCodigo(){
 	
 	if(clima == -1)
 		alert("Selecione um clima válido");
-		
+	
+	nextLocation = new String;
 	if(lat < -23.5){
 		if(clima == 1){
-			window.location="./clima1.html";
+			nextLocation="./clima1.html";
 		}else if(clima == 2){
-			window.location="./clima3.html";
+			nextLocation="./clima3.html";
 		}else if(clima == 3){
-			window.location="./clima2.html";
+			nextLocation="./clima2.html";
 		}else{
 			alert("Selecione um clima válido");
 		}
 	}else if( lat < -15){
 		if(clima == 1){
-			window.location="./clima4.html";
+			nextLocation="./clima4.html";
 		}else if(clima == 2){
-			window.location="./clima8.html";
+			nextLocation="./clima8.html";
 		}else if(clima == 3){
-			window.location="./clima7.html";
+			nextLocation="./clima7.html";
 		}else if(clima == 4){
-			window.location="./clima6.html";
+			nextLocation="./clima6.html";
 		}else{
 			alert("Selecione um clima válido");
 		}	
 	} else{
 		if(clima == 1){
-			window.location="./clima5.html";
+			nextLocation="./clima5.html";
 		}else if(clima == 2){
-			window.location="./clima11.html";
+			nextLocation="./clima11.html";
 		}else if(clima == 3){
-			window.location="./clima10.html";
+			nextLocation="./clima10.html";
 		}else if(clima == 4){
-			window.location="./clima9.html";
+			nextLocation="./clima9.html";
 		}else{
 			alert("Selecione um clima válido");
 		}	
 	}
+	console.log(lat);
+	console.log(clima);
+	console.log(nextLocation);
+	//window.location=nextLocation;
 	return false;
 }
