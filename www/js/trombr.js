@@ -25,6 +25,21 @@ function resizeImg(){
 $(window).load(resizeImg);
 $(window).resize(resizeImg);
 */
+
+$(document).ready(function(){
+	// Grab a select field
+	var el = $('#climasSelectMenu');
+
+	// Select the relevant option, de-select any others
+	el.val('some value').attr('selected', true).siblings('option').removeAttr('selected');
+
+	// Initialize the selectmenu
+	el.selectmenu();
+	console.log("dentro");
+	// jQM refresh
+	el.selectmenu("refresh", true);
+});
+
 $(document).change(function(){
     var latitude = $("#LatitudeTextInput").val();
 	item = new String;
