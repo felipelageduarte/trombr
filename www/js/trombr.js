@@ -39,38 +39,40 @@ $(document).ready(function(){
 	el.selectmenu("refresh", true);
 });
 */
-
-$(document).change(function(){
-    var latitude = $("#LatitudeTextInput").val();
+var clima = -1;
+/*
+function loadMenu(){
+	var latitude = $("#LatitudeTextInput").val();
 	item = new String;
 	
 	if(latitude < -23.5){	
-		item += '<option value=1>Frio</option>';
+		item += '<option value=1 selected="selected">Frio</option>';
 		item += '<option value=2>Subtropical</option>';
 		item += '<option value=3>Temperado</option>';
 	}else {
-		item += '<option value=1>Tropical de Altitude</option>';
+		item += '<option value=1 selected>Tropical de Altitude</option>';
 		item += '<option value=2>Quente e Úmido</option>';
 		item += '<option value=3>Quente e Seco</option>';
 		item += '<option value=4>Continental</option>';
 	}
 	$('#climasSelectMenu').html(item).trigger("create");
-});
-
-function isNumber(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
 function submitCodigo(){
 	//validação do código inserido pelo usuário
 	var lat = document.forms["climaForm"]["LatitudeTextInput"].value;
-	var clima = document.forms["climaForm"]["climasSelectMenu"].value;
 	
-	if(lat < -33.77 || lat > 4.5) 
+	alert("RODOU");
+	
+	if(lat < -33.77 || lat > 4.5) {
 		alert("Latitude inválida. Forneça um valor no intervalor [-33.77,+4.5]");
+		return false;
+	}
 	
-	if(clima == -1)
+	if(clima == -1){
 		alert("Selecione um clima válido");
+		return false;
+	}
 	
 	nextLocation = new String;
 	if(lat < -23.5){
@@ -111,6 +113,25 @@ function submitCodigo(){
 	console.log(lat);
 	console.log(clima);
 	console.log(nextLocation);
-	//window.location=nextLocation;
+	window.location=nextLocation;
 	return false;
 }
+
+$(document).on('change', function(){
+	loadMenu();
+});
+
+$(document).on('ready', function(){		
+	loadMenu();
+	
+	$('#climasSelectMenu').on('change', function(){
+		clima = $('#climasSelectMenu').val();
+	});
+
+	function isNumber(n) {
+	  return !isNaN(parseFloat(n)) && isFinite(n);
+	}
+	
+	$('#submit').on('click',submitCodigo);	
+});
+*/
