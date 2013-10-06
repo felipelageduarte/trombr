@@ -1,188 +1,259 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-	  <meta name="apple-mobile-web-app-capable" content="yes">
-	  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-	  <title>TomBr</title> 
-	  
-	  <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">  
-	  <!-- Extra Codiqa features -->
-	  <link rel="stylesheet" href="css/codiqa.ext.css">  
-	  <!-- jQuery and jQuery Mobile -->
-	  <script src="js/jquery-1.9.1.min.js"></script>
-	  <script src="js/jquery.mobile-1.3.1.min.js"></script>	  
-	  <!-- Extra Codiqa features -->	   
-	  <link rel="stylesheet" href="themes/trombr.min.css" />	  
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>TomBr</title>
+		
+		<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+		<!-- Extra Codiqa features -->
+		<link rel="stylesheet" href="css/codiqa.ext.css">
+		<!-- jQuery and jQuery Mobile -->
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery.mobile-1.3.1.min.js"></script>
+		<!-- Extra Codiqa features -->
+		<link rel="stylesheet" href="themes/trombr.min.css" />
+		
+		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$.mobile.allowCrossDomainPages = true;
+		    
+// 			// Call onDeviceReady when PhoneGap is loaded.
+// 		    //
+// 		    // At this point, the document has loaded but phonegap-1.0.0.js has not.
+// 		    // When PhoneGap is loaded and talking with the native device,
+// 		    // it will call the event `deviceready`.
+// 		    // 
+// 		    document.addEventListener("deviceready", onDeviceReady, false);
+		
+// 		    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+// 		    //
+// 		    function onDeviceReady() {
+// 		        // Register the event listener
+// 		        document.addEventListener("backbutton", onBackKeyDown, false);
+// 		    }
+		
+// 		    // Handle the back button
+// 		    //
+// 		    function onBackKeyDown(e) {
+// 				try {
+					
+// 					var activePage = $.mobile.activePage.attr('id');
+		
+// 					alert(activePage);
+					
+// 					if (activePage == 'Options') {
+// 						closeOptions();
+// 					} else if (activePage == 'Popup') {
+// 						closePopup();
+// 					} else if (activePage == 'HomePage') {
+		
+// 						alert("lugar certo");
+// 						function checkButtonSelection(iValue) {
+// 							if (iValue == 2) {
+// 								//navigator.app.exitApp();
+// 							}
+// 						}
+		
+// 						e.preventDefault();
+// 						navigator.notification.confirm(
+// 								"Are you sure you want to EXIT the program?",
+// 								checkButtonSelection, 'EXIT APP:', 'Cancel,OK');
+// 					} else {
+// 						navigator.app.backHistory();
+// 					}
+// 				} catch (e) {
+// 					console.log('Exception: ' + e, 3);
+// 				}
+// 		    }
+	
+	    </script>
+		
 	</head>
 	<body>
 		<!-- Home -->
-		<div data-theme="d" data-role="page">
+		<div data-theme="d" data-role="HomePage">
 			<div data-theme="d" data-role="header" data-position="fixed">
 				<center>
 					<div id="image-container">
-						<img id="logotrombr" src="images/logotrombr.png"  width="264" height="120"/>
+						<img id="logotrombr" src="images/logotrombr.png" width="264"
+							height="120" />
 					</div>
-					<H4>Sistema de Recomendações para Projetos de Paredes Trombe no Brasil</H4>
-				<center/>
-				<div data-role="navbar" data-iconpos="top">
-					<ul>
-						<li>
-							<a href="#" class="menu ui-btn-active ui-state-persist"> Home </a>
-						</li>
-						<li>
-							<a href="./recomendacoesprojeto.html" class="menu"> Recomendações de Projeto </a>
-						</li>
-						<li>
-							<a href="./sobre.html" class="menu"> Sobre </a>
-						</li>
-					</ul>
-				</div>
+					<H4>Sistema de Recomendações para Projetos de Paredes Trombe no
+						Brasil</H4>
+					<center />
+					<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="#" class="menu ui-btn-active ui-state-persist">
+									Home </a></li>
+							<li><a href="./recomendacoesprojeto.html" class="menu">
+									Recomendações de Projeto </a></li>
+							<li><a href="./sobre.html" class="menu"> Sobre </a></li>
+						</ul>
+					</div>
 			</div>
 			<div data-theme="d" data-role="content">
-				<p>As Paredes Trombe possuem um grande potencial na promoção do conforto térmico 
-				de uma edificação, já que podem ser utilizadas com a intenção de tomar partido da 
-				ventilação natural, aquecimento solar e inércia térmica (ELSADIG, 2004).</P>
-				
-				<p>A integração da Parede Trombe na Arquitetura é relativamente simples. Vista 
-				pelo lado exterior aparenta ser uma janela e, pelo interior, assemelha-se a uma 
-				parede comum. As Paredes Trombe são colocadas nas fachadas em que se pretende 
-				receber ganhos solares indiretos durante um determinado período do ano, aproveitando, 
-				durante a noite, o calor que acumularam durante o dia ou para tomar partido da 
-				ventilação natural nos meses quentes ou aquecimento nos períodos frios.</p>
-				
-				<p>Esta parede é basicamente uma pequena "estufa", constituída por um vidro exterior 
-				orientada preferencialmente para o Norte (Para o caso do hemisfério Sul), porém, para 
-				o caso do Brasil, onde o maior desconforto térmico ocorre no verão, principalmente nas 
-				regiões com baixa latitude, há que se pensar na possibilidade de orientar este 
-				dispositivo para a fachada sul, pois neste período a trajetória do sol está voltada 
-				para o sul.</p>
-				
-				<p>Além desta parede envidraçada, há uma caixa de ar e uma parede de grande densidade 
-				e espessura moderada, que lhe garante grande inércia térmica, (normalmente em argila, 
-				pedra, ou tijolo maciço). Trata-se então de um sistema capaz de absorver a energia do 
-				sol, armazená-la durante o dia (no interior da parede, devido à inércia térmica da 
-				mesma) e irradiar calor para dentro da divisão adjacente durante a noite, ou quando 
-				for mais necessário.</p>
-				
-				<p>O sistema evoluiu de uma parede grossa com vidro na frente, em que a maior parte 
-				do calor era perdido e não chegava ao interior do edifício, para a versão moderna 
-				que possui ventilações no topo e na base da caixa de ar, que permitem o arrefecimento 
-				rápido do coletor e maximiza os ganhos obtidos. Segundo Balcomb (1998) o desempenho 
-				de uma parede trombe pode cair cerca de 40% caso ela não esteja aberta para o 
-				ambiente interno e a parede trombe deve estar livre de elementos como armários, 
-				dry-wall ou elementos que possam impedir a transferência de calor por radiação da 
-				parede para a zona interna.</p>
-				
-				<p>A Figura 1 ilustra a composição deste sistema construtivo de modo a facilitar 
-				o entendimento de suas partes e seu processo de funcionamento. Neste esquema é 
-				possível observar a superfície envidraçada (a), com espessura geralmente entre 02 
-				e 06 milímetros, que será responsável em promover o efeito estufa na câmara de ar 
-				(b) entre o vidro e a parede interna com alta massa térmica (c). Esta parede 
-				apresenta-se usualmente com alta absortância térmica, de modo a otimizar o acúmulo 
-				de calor na câmara de ar e consequentemente o aquecimento do ar nesta região do 
-				componente analisado. Esta parede apresenta duas aberturas para circulação do ar (d), 
-				sendo uma inferior para entrada do ar frio que vai ser aquecido na câmara de ar 
-				devido ao efeito estufa e outra superior para passagem do ar aquecido para o ambiente 
-				interno (e) que será ocupado pelos usuários e se tornará objeto de estudo deste 
-				trabalho no que tange o desempenho térmico de edificações. O ambiente interno apresenta 
-				uma abertura para entrada do ar (f) na face oposta à face onde localiza-se a parede 
-				trombe, permitindo a renovação de ar neste espaço e remoção do ar aquecido nos momentos 
-				em que este procedimento se faz necessário.</p>
-				
-				<p>A superfície envidraçada também apresenta uma abertura em sua região superior 
-				(a.1) para exaustão do ar aquecido, possibilitando tomar partido da ventilação 
-				natural nos meses mais quentes do ano.</p>
-				
+				<p>As Paredes Trombe possuem um grande potencial na promoção do
+					conforto térmico de uma edificação, já que podem ser utilizadas com
+					a intenção de tomar partido da ventilação natural, aquecimento solar
+					e inércia térmica (ELSADIG, 2004).</P>
+	
+				<p>A integração da Parede Trombe na Arquitetura é relativamente
+					simples. Vista pelo lado exterior aparenta ser uma janela e, pelo
+					interior, assemelha-se a uma parede comum. As Paredes Trombe são
+					colocadas nas fachadas em que se pretende receber ganhos solares
+					indiretos durante um determinado período do ano, aproveitando,
+					durante a noite, o calor que acumularam durante o dia ou para tomar
+					partido da ventilação natural nos meses quentes ou aquecimento nos
+					períodos frios.</p>
+	
+				<p>Esta parede é basicamente uma pequena "estufa", constituída
+					por um vidro exterior orientada preferencialmente para o Norte (Para
+					o caso do hemisfério Sul), porém, para o caso do Brasil, onde o
+					maior desconforto térmico ocorre no verão, principalmente nas
+					regiões com baixa latitude, há que se pensar na possibilidade de
+					orientar este dispositivo para a fachada sul, pois neste período a
+					trajetória do sol está voltada para o sul.</p>
+	
+				<p>Além desta parede envidraçada, há uma caixa de ar e uma parede
+					de grande densidade e espessura moderada, que lhe garante grande
+					inércia térmica, (normalmente em argila, pedra, ou tijolo maciço).
+					Trata-se então de um sistema capaz de absorver a energia do sol,
+					armazená-la durante o dia (no interior da parede, devido à inércia
+					térmica da mesma) e irradiar calor para dentro da divisão adjacente
+					durante a noite, ou quando for mais necessário.</p>
+	
+				<p>O sistema evoluiu de uma parede grossa com vidro na frente, em
+					que a maior parte do calor era perdido e não chegava ao interior do
+					edifício, para a versão moderna que possui ventilações no topo e na
+					base da caixa de ar, que permitem o arrefecimento rápido do coletor
+					e maximiza os ganhos obtidos. Segundo Balcomb (1998) o desempenho de
+					uma parede trombe pode cair cerca de 40% caso ela não esteja aberta
+					para o ambiente interno e a parede trombe deve estar livre de
+					elementos como armários, dry-wall ou elementos que possam impedir a
+					transferência de calor por radiação da parede para a zona interna.</p>
+	
+				<p>A Figura 1 ilustra a composição deste sistema construtivo de
+					modo a facilitar o entendimento de suas partes e seu processo de
+					funcionamento. Neste esquema é possível observar a superfície
+					envidraçada (a), com espessura geralmente entre 02 e 06 milímetros,
+					que será responsável em promover o efeito estufa na câmara de ar (b)
+					entre o vidro e a parede interna com alta massa térmica (c). Esta
+					parede apresenta-se usualmente com alta absortância térmica, de modo
+					a otimizar o acúmulo de calor na câmara de ar e consequentemente o
+					aquecimento do ar nesta região do componente analisado. Esta parede
+					apresenta duas aberturas para circulação do ar (d), sendo uma
+					inferior para entrada do ar frio que vai ser aquecido na câmara de
+					ar devido ao efeito estufa e outra superior para passagem do ar
+					aquecido para o ambiente interno (e) que será ocupado pelos usuários
+					e se tornará objeto de estudo deste trabalho no que tange o
+					desempenho térmico de edificações. O ambiente interno apresenta uma
+					abertura para entrada do ar (f) na face oposta à face onde
+					localiza-se a parede trombe, permitindo a renovação de ar neste
+					espaço e remoção do ar aquecido nos momentos em que este
+					procedimento se faz necessário.</p>
+	
+				<p>A superfície envidraçada também apresenta uma abertura em sua
+					região superior (a.1) para exaustão do ar aquecido, possibilitando
+					tomar partido da ventilação natural nos meses mais quentes do ano.</p>
+	
 				<center>
 					<div id="image-container">
-						<img id="usplogo" src="images/imagemhome.png"  width="90%">
-							<br>Figura 1 - Corte esquemático de uma Parede Trombe
-						</img>
-					</div>			
+						<img id="usplogo" src="images/imagemhome.png" width="90%"> <br>Figura
+						1 - Corte esquemático de uma Parede Trombe </img>
+					</div>
 				</center>
-				
-				<p>De acordo com Elsadig (2004) este dispositivo possui vantagens e desvantagens em 
-				sua utilização; algumas vantagens são:</p>
-				
+	
+				<p>De acordo com Elsadig (2004) este dispositivo possui vantagens
+					e desvantagens em sua utilização; algumas vantagens são:</p>
+	
 				<ul>
-					<li> O armazenamento de calor está localizado próximo ao vidro ou a área de 
-						coleta, permitindo maior eficiência no aproveitamento da radiação solar;
-					<li> O espaço do piso e das paredes pode ter mais flexibilidade, além de 
-						não expor o mobiliário à radiação solar direta;
-					<li> O atraso térmico obtido a partir da utilização deste sistema permite a 
-						liberação de calor para o ambiente interno nos momentos de maior necessidade, 
-						além de incrementar a ventilação natural em alguns casos onde esta estratégia 
-						é requisitada.
+					<li>O armazenamento de calor está localizado próximo ao vidro
+						ou a área de coleta, permitindo maior eficiência no aproveitamento
+						da radiação solar;
+					<li>O espaço do piso e das paredes pode ter mais flexibilidade,
+						além de não expor o mobiliário à radiação solar direta;
+					<li>O atraso térmico obtido a partir da utilização deste
+						sistema permite a liberação de calor para o ambiente interno nos
+						momentos de maior necessidade, além de incrementar a ventilação
+						natural em alguns casos onde esta estratégia é requisitada.
 				</ul>
-						
-				<p>No entanto, algumas desvantagens devem ser observadas pelos profissionais que 
-				desejam incorporar tal elemento em seus projetos: </p>
-				
+	
+				<p>No entanto, algumas desvantagens devem ser observadas pelos
+					profissionais que desejam incorporar tal elemento em seus projetos:
+				</p>
+	
 				<ul>
-					<li> A vista da face norte (ou a face onde se encontra este dispositivo) é 
-						parcialmente perdida, além do aproveitamento da luz natural incidente nesta 
-						fachada;
-					<li> Este componente pode ocupar uma grande área de fachada em edificações menores;
-					<li> Móveis e equipamentos colocados na parede trombe afetam diretamente o seu 
-						desempenho;
-					<li> Paredes trombe ventiladas devem ser fechadas à noite evitando assim o ciclo 
-						inverso do ar;
-					<li> Em dias sem sol, o desempenho da parede trombe é afetado de forma significativa.
+					<li>A vista da face norte (ou a face onde se encontra este
+						dispositivo) é parcialmente perdida, além do aproveitamento da luz
+						natural incidente nesta fachada;
+					<li>Este componente pode ocupar uma grande área de fachada em
+						edificações menores;
+					<li>Móveis e equipamentos colocados na parede trombe afetam
+						diretamente o seu desempenho;
+					<li>Paredes trombe ventiladas devem ser fechadas à noite
+						evitando assim o ciclo inverso do ar;
+					<li>Em dias sem sol, o desempenho da parede trombe é afetado de
+						forma significativa.
 				</ul>
-				
-				<p>Para um bom dimensionamento de uma parede trombe, deve-se levar em consideração alguns 
-				aspectos:</p>
-				
+	
+				<p>Para um bom dimensionamento de uma parede trombe, deve-se
+					levar em consideração alguns aspectos:</p>
+	
 				<ul>
-					<li> O clima, pois as perdas de calor dependem da diferença entre as temperaturas 
-						externa e interna. Quanto maior for esta diferença, maior será a perda de calor, 
-						podendo ocorrer um superdimensionamento deste dispositivo;
-					<li> A latitude e orientação da edificação, pois a energia solar incidente pode 
-						mudar de acordo com a latitude, a partir de uma análise da trajetória solar;
-					<li> Necessidade de aquecimento e refrigeração do local onde será implantado este 
-						sistema.
-					<li>  A eficiência de uma parede trombe também dependerá de alguns fatores internos, 
-						como a parede, seus materiais e espessura; superfície envidraçada e o número e 
-						dimensões das aberturas.
+					<li>O clima, pois as perdas de calor dependem da diferença
+						entre as temperaturas externa e interna. Quanto maior for esta
+						diferença, maior será a perda de calor, podendo ocorrer um
+						superdimensionamento deste dispositivo;
+					<li>A latitude e orientação da edificação, pois a energia solar
+						incidente pode mudar de acordo com a latitude, a partir de uma
+						análise da trajetória solar;
+					<li>Necessidade de aquecimento e refrigeração do local onde
+						será implantado este sistema.
+					<li>A eficiência de uma parede trombe também dependerá de
+						alguns fatores internos, como a parede, seus materiais e espessura;
+						superfície envidraçada e o número e dimensões das aberturas.
 				</ul>
-				
-				<p>Serão consideradas três situações básicas para as recomendações de uso. A primeira 
-				situação pretende proporcionar aquecimento nos períodos frios, quando as duas aberturas 
-				superior e inferior) permitem a circulação do ar que está aquecido neste dispositivo para o 
-				ambiente padrão, porém, sem renovação do ar interno por meio de ventilação natural 
-				(considerado como modelo fechado - FECH). A segunda situação promove a ventilação 
-				natural, quando a face de vidro da parede trombe possui uma abertura para saída do ar, além 
-				de considerar nesta situação a abertura inferior da parede trombe e a abertura de entrada do 
-				ambiente permitindo a passagem do ar (Chamado de modelo para ventilação natural- VENT). Já na 
-				terceira 		situação, todas as aberturas do ambiente permitirão a circulação do ar, 
-				promovendo aquecimento neste caso, chamou-se de modelo para aquecimento - AQEC), conforme 
-				pode-se observar na figura 2</p>
-				
+	
+				<p>Serão consideradas três situações básicas para as
+					recomendações de uso. A primeira situação pretende proporcionar
+					aquecimento nos períodos frios, quando as duas aberturas superior e
+					inferior) permitem a circulação do ar que está aquecido neste
+					dispositivo para o ambiente padrão, porém, sem renovação do ar
+					interno por meio de ventilação natural (considerado como modelo
+					fechado - FECH). A segunda situação promove a ventilação natural,
+					quando a face de vidro da parede trombe possui uma abertura para
+					saída do ar, além de considerar nesta situação a abertura inferior
+					da parede trombe e a abertura de entrada do ambiente permitindo a
+					passagem do ar (Chamado de modelo para ventilação natural- VENT). Já
+					na terceira situação, todas as aberturas do ambiente permitirão a
+					circulação do ar, promovendo aquecimento neste caso, chamou-se de
+					modelo para aquecimento - AQEC), conforme pode-se observar na figura
+					2</p>
+	
 				<center>
 					<div id="image-container">
-						<img id="usplogo" src="images/cond.png"  width="90%">
-							<br>Figura 2 - Esquema das situações consideradas (a) situação 1 (FECH) (b) situação 2 
-							(VENT) e (c) situação 3 (AQEC)
-						</img>
-					</div>			
+						<img id="usplogo" src="images/cond.png" width="90%"> <br>Figura
+						2 - Esquema das situações consideradas (a) situação 1 (FECH) (b)
+						situação 2 (VENT) e (c) situação 3 (AQEC) </img>
+					</div>
 				</center>
-				
+	
 				<h4>Referências:</h4>
 				<ul>
-					<li> ELSADIG, Ayman Khalid, <b>Energy Efficiency in commercial Buildings</b>. Dissertation 
-					presented to Master Course of Science Sustainable Engineering, University of 
-					Strathclyde, 2005
-					<li> BALCOMB, J.D., BARKER, G., HANCOCK, C.E.  <b>An Exemplary Building Case Study of 
-					the Grand Canyon South Rim Residence</b>. NREL/TP-550-24767, Golden, CO:  National 
-					Renewable Energy Laborator. 1998
+					<li>ELSADIG, Ayman Khalid, <b>Energy Efficiency in
+							commercial Buildings</b>. Dissertation presented to Master Course of
+						Science Sustainable Engineering, University of Strathclyde, 2004
+					<li>BALCOMB, J.D., BARKER, G., HANCOCK, C.E. <b>An
+							Exemplary Building Case Study of the Grand Canyon South Rim
+							Residence</b>. NREL/TP-550-24767, Golden, CO: National Renewable
+						Energy Laborator. 1998
 				</ul>
-			</div>			
+			</div>
 			<div data-theme="d" data-role="footer" data-position="fixed">
-				<h3>
-					PPGAU - USP / SC - 2013 
-				</h3>
+				<h3>PPGAU - USP / SC - 2013</h3>
 			</div>
 		</div>
 	</body>

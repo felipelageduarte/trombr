@@ -95,10 +95,8 @@ $('#submit').on('click',function(){
 		}	
 	}
 //	alert("lat: " + latitude + " | clima: " + clima + " | nextLocation: " + nextLocation);
-//	window.location=nextLocation;
-//	window.location.href = nextLocation;
-	$.mobile.changePage(nextLocation);
-	return true;
+	$.mobile.changePage(nextLocation,{reverse:false,reloadPage:false,changeHash:true});
+	return false;
 });
 
 
