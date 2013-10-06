@@ -1,28 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-	  <meta name="apple-mobile-web-app-capable" content="yes">
-	  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-	  <title>TomBr</title> 
-	  
-	  
-	  
-	  <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">  
-	  <!-- Extra Codiqa features -->
-	  <link rel="stylesheet" href="css/codiqa.ext.css">  
-	  <!-- jQuery and jQuery Mobile -->
-	  <script src="js/jquery-1.9.1.min.js"></script>
-	  <script src="js/jquery.mobile-1.3.1.min.js"></script>	  
-	  <!-- Extra Codiqa features -->	   
-	  <link rel="stylesheet" href="themes/trombr.min.css" />
-	  <script stype="text/javascript" src="js/trombr.js"></script> 
-	   
+	  <title>TomBr</title> 	   
 	</head>	
-	<body>
+	<body>		
 		<!-- Home -->
 		<div data-theme="d" data-role="page">
+			<script stype="text/javascript" src="js/trombr.js"></script> 
 			<div data-theme="d" data-role="header" data-position="fixed">
 				<center>
 					<div id="image-container">
@@ -47,15 +31,15 @@
 			<div data-theme="d" data-role="content">
 				<center>
 					<form id="climaForm">
-						<div data-role="fieldcontain">
+						<div data-role="fieldcontain" id="latitudeRange" >
 						   <label for="LatitudeTextInput">Informe sua Latitude:</label>
-						   <input type="range" data-theme="a" name="LatitudeTextInput" id="LatitudeTextInput" value="0.0" step="0.01" min="-33.77" max="4.50"  />
+						   <input type="range" data-theme="a" name="LatitudeTextInput" id="LatitudeTextInput" 
+						   									value="0.0" step="0.01" min="-33.77" max="4.50"/>
 						</div>
 						
-						<div data-role="fieldcontain">
+						<div data-role="fieldcontain" id="climaSelect">
 						   <label for="climasSelectMenu" class="select">Selecione o Clima:</label>
 						   <select name="climasSelectMenu" id="climasSelectMenu">
-							  <option value=-1>&nbsp;</option>
 						   </select>
 						</div>
 
@@ -86,7 +70,7 @@
 				<h3>
 					PPGAU - USP / SC - 2013 
 				</h3>
-			</div>
+			</div>			
 		</div>
 	</body>
 </html>
